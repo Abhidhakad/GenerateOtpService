@@ -1,6 +1,6 @@
 const crypto = require("crypto");
 
-const generateSecureOTP = (length = 4) => {
+const generateSecureOTP = async (length = 4) => {
     const digits = "0123456789";
     let otp = "";
     for (let i = 0; i < length; i++) {
@@ -10,4 +10,3 @@ const generateSecureOTP = (length = 4) => {
 };
 
 module.exports = generateSecureOTP;
-//console.log(generateSecureOTP()); // Example: "395827"

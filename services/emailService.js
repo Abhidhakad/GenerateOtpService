@@ -14,7 +14,8 @@ const sendEmail = async (to, otp) => {
         from: process.env.GMAIL_USER,
         to,
         subject: "Your OTP Code",
-        text: `Your OTP is: ${otp}`,
+        text: `Your OTP is: ${otp} valid for 5 minutes`,
+        html: `<h1>Your OTP is: ${otp}</h1>`,
      });
      return true;
    } catch (error) {
